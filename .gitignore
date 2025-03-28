@@ -25,3 +25,13 @@
 /public/assets/
 /assets/vendor/
 ###< symfony/asset-mapper ###
+
+package-lock.json
+package.json
+yarn-error.log
+yarn.lock
+node_modules/
+npm-debug.log*
+npm-debug.log
+yarn-debug.log*
+yarn-error.log
