@@ -244,11 +244,43 @@
 }
 
 @media (max-width: 768px) {
-    
-}
+    .projetContent {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      margin: 3rem auto;
+      width: 80%;
+  }
+    .projetTitre1 {
+      text-align: center;
+  }
+  .modal-container {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(169, 167, 167);
+    overflow-y: auto; /* Standard universel */
+    z-index: 10;
+    transition: right 1s ease, opacity 1s ease, visibility 1s ease;
+    opacity: 0;
+    visibility: hidden;
+    border: 1px solid #000;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
 
-@media (max-width: 1024px) {  
-    
+  .modal-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .modal {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+  }
 }
-    
 

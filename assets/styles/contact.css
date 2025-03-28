@@ -12,10 +12,10 @@
 
 .contactGrid {
     display: grid;
-    grid-template-columns: 40% 40%;
+    grid-template-columns: 25% 30% 40%;
     gap: 1rem;
     margin: 1rem auto;
-    width: 80%;
+    width: 100%;
 }
 
 .hrContact {
@@ -185,10 +185,76 @@
     text-decoration: none;
 }
 
-@media (max-width: 768px) {
-    
+@media screen and (max-width: 768px) {
+    .contactGrid {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 95%;
+        gap: 2rem;
+    }
+
+    .contactTitre {
+        font-size: 2.5rem;
+        margin: 2rem;
+        text-align: center;
+    }
+
+    .contactAdresse {
+        grid-template-rows: auto;
+        gap: 2rem;
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .contactAdresse h3 {
+        font-size: 1.3rem;
+        margin: 1rem 0;
+    }
+
+    .contactAdresse p {
+        margin: 0.5rem 0;
+    }
+
+    .containerC {
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    .formInput {
+        gap: 2rem;
+    }
+
+    .footerContent {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .btnMention {
+        width: 80%;
+        height: 30px;
+        margin: 0 auto;
+        border-radius: 5px;
+    }
 }
 
-@media (max-width: 1024px) {  
-    
+@media screen and (max-width: 375px) {
+    .contactTitre {
+        font-size: 2rem;
+        margin: 2rem;
+    }
+
+    .contactAdresse {
+        gap: 1.5rem;
+    }
+
+    .contactAdresse h3 {
+        font-size: 1.2rem;
+    }
+
+    .contactAdresse i {
+        font-size: 1.2rem;
+    }
+
+    .inputC1, .inputC2, .inputC3 {
+        width: 90%;
+    }
 }

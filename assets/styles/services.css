@@ -124,8 +124,86 @@ html, body {
     text-decoration: none;
 }
 
-@media (max-width: 768px) {
+/* Media queries pour mobile */
+@media screen and (max-width: 768px) {
+    html, body {
+        padding: 0;
+        margin: 0;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+    .servicesContent {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "one"
+                            "four"
+                            "five"
+                            "height"
+                            "nine"
+                            "twelve";
+        gap: 2rem;
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .servicesContent1 {
+        width: 95%;
+        height: auto;
+        padding: 15px;
+        margin: 0;
+    }
+
+    /* Masquer les éléments non utilisés en mobile */
+    .icon.two, .icon.three, .icon.six, 
+    .icon.seven, .icon.ten, .icon.eleven {
+        display: none;
+    }
+
+    .icon {
+        font-size: 1.2rem;
+    }
+
+    .servicesTitre {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .servicesContent {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "one"
+                            "four"
+                            "five"
+                            "height"
+                            "nine"
+                            "twelve";
+        gap: 2rem;
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .icon.two, .icon.three, .icon.six, 
+    .icon.seven, .icon.ten, .icon.eleven {
+        display: none;
+    }
     
+    .servicesContent1 {
+        width: 100%;
+        height: auto;
+        padding: 15px;
+        margin: 0;
+    }
+
+    .icon {
+        font-size: 1.2rem;
+    }
+
+    .servicesTitre {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
 }
 
 @media (max-width: 1024px) {  
