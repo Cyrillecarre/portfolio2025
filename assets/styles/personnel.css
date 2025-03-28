@@ -137,9 +137,42 @@
 }
 
 @media (max-width: 768px) {
-    
-}
-
-@media (max-width: 1024px) {  
-    
+    .a-propos1 {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .a-propos4 {
+        width: 90%;
+        margin: 0 auto;
+        padding-top: 5rem;
+    }
+    .titrePropos {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .textPropos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        font-size: 1.5rem;
+        margin: 0 auto;
+        padding-bottom: 1rem;
+    }
+    .titrePropos2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        margin: 0;
+        padding-bottom: 3rem;
+        padding-top: 8rem;
+        color: white;
+        font-style: italic;
+    }
 }

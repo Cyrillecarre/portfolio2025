@@ -196,7 +196,24 @@
 }
 
 @media (max-width: 768px) {
-    
+    .tarifContent {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.2rem;
+        padding: 4rem auto;
+        margin: 0 auto;
+        width: 85%;
+    }
+    .devisContent {
+        display: none;
+    }
+    .condition {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        width: 90%;
+    }
 }
 
 @media (max-width: 1024px) {  
