@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes services{% endblock %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" href="{{ asset('styles/services.css') }}">
+{% endblock %}
+
+{% block body %}
+<main class="services" id="services" style="background-image: url('{{ asset('images/services.jpg') }}');">
+            <h2 class="servicesTitre">Mes Services</h2>
+            <div class="servicesContent">
+                    <div class="servicesContent1 one">
+                        <h3>Gestion de projets web</h3>
+                        <div>
+                            <p>Site vitrine, corporate, évènementiel,
+                            <br> e-commerce, intranet, application mobile.</p>
+                        </div>
+                    </div>
+                    <span class="icon two"><i class="far fa-lightbulb" aria-hidden="true"></i></span>
+                    <span class="icon three"><i class="fa-solid fa-code"></i></span>
+                    <div class="servicesContent1 four">
+                        <h3>Integration Web</h3>
+                        <div>
+                            <p>Des intégration Web HTML/CSS 
+                            <br>respectueuse des standars du Web</p>
+                        </div>
+                    </div>
+                    <div class="servicesContent1 five">
+                        <h3>Développement Spécifique</h3>
+                        <div>
+                            <p>Répondre au mieux à vos secteurs d'activitées</p>
+                        </div>
+                    </div>
+                    <span class="icon six"><i class="fa-regular fa-pen-to-square"></i></span>
+                    <span class="icon seven"><i class="fa-solid fa-chart-line"></i></span>
+                    <div class="servicesContent1 height">
+                        <h3 >Référencement Naturel</h3>
+                        <div>
+                            <p>Affichage sémentique des informations 
+                            <br> des pages propres pour un référencement optimal</p>
+                        </div>
+                    </div>
+                    <div class="servicesContent1 nine">
+                        <h3>Dynamisme des Pages</h3>
+                        <div>
+                            <p>Des animations de contenus non intrusives 
+                            <br> pour embellir votre projet</p>
+                        </div>
+                    </div>
+                    <span class="icon ten"><i class="fa-regular fa-thumbs-up"></i></span>
+                    <span class="icon eleven"><i class="fa-solid fa-desktop"></i></span>
+                    <div class="servicesContent1 twelve">
+                        <h3>Responsive Design</h3>
+                        <div>
+                            <p>Compatible tout supports</p>
+                        </div>
+                    </div>
+            </div>
+            <div>
+                <a class="retour" href="{{ path('app_home') }}">Retour</a>
+            </div>
+    </main>
+{% endblock %}

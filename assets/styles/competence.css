@@ -1,0 +1,158 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.competences {
+    background: rgba(0, 0, 0, 0.961);
+    padding-bottom: 130px;
+}
+
+.competencesTitre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    margin: 0;
+    color: white;
+    padding: 80px 0px 30px 0px;
+}
+
+.competencesTitre1 {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    align-items: center;
+    margin: 0;
+    color: white;
+    padding: 30px 0px 50px 0px;
+}
+
+.competencesContentText {
+    font-size: 10px;
+    font-style: italic;
+}
+
+.competencesContent {
+    color: white;
+}
+
+.competencesContentTitre,
+.competencesContentText {
+    margin: 0;
+    padding: 0;
+}
+
+.competencesContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'competencesContentImage competencesContent1';
+    gap: 20px;
+    max-width: 80%;
+    margin: 0 auto;
+    margin-bottom: 150px;
+}
+
+.skillImage {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.animated-progress {
+    border-radius: 50px;
+    opacity: 0;
+    width: 0%;
+    transition: width 1s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.animated-progress:nth-child(1) {
+    transition-delay: 0s, 0s;
+}
+
+.animated-progress:nth-child(2) {
+    transition-delay: 0.2s, 0.2s;
+}
+
+.animated-progress:nth-child(3) {
+    transition-delay: 0.5s, 0.5s;
+}
+
+.animated-progress:nth-child(4) {
+    transition-delay: 0.8s, 0.8s;
+}
+
+.animated-progress:nth-child(5) {
+    transition-delay: 1.1s, 1.1s;
+}
+
+.animated-progress:nth-child(6) {
+    transition-delay: 1.4s, 1.4s;
+}
+
+.animated-progress:nth-child(7) {
+    transition-delay: 1.7s, 1.7s;
+}
+
+.animated-progress:nth-child(8) {
+    transition-delay: 2s, 2s;
+}
+
+.animated-progress:nth-child(9) {
+    transition-delay: 2.5s, 2.5s;
+}
+
+progress {
+    width: 100%;
+    height: 17px;
+    margin-top: 6px;
+    position: relative;
+    background-color: white;
+}
+
+progress::-webkit-progress-bar {
+    background-color: white;
+    border-radius: 20px;
+}
+
+progress::-webkit-progress-value {
+    background-color: #0f03f2;
+}
+
+progress::after {
+    content: attr(value) '%';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 14px;
+}
+
+.retour {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    color: red;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.devis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    
+}
+
+@media (max-width: 1024px) {  
+    
+}

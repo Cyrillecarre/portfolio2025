@@ -1,0 +1,339 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes Projets{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('styles/projet.css') }}">
+{% endblock %}
+
+{% block body %}
+<main class="projet" id="projets">
+        <div class="containerI">
+            <div class="contentP">
+                <h1 class="projetTitre">Mes Projets</h1>
+                <p class="projetTitre1">Des projets réalisés avec passion</p>
+            </div>
+            <div class="projetContent">
+                <div class="projetContent1 modal1" onclick="openModal('modal1')">
+                    <div class="laptop-wrapper">
+                        <img src="{{ asset('images/10706499.png') }}" alt="image-resas" class="laptop-frame">
+                        <div class="screen-content">
+                            <img src="{{ asset('images/header.png') }}" alt="image-pf" class="project-screen">
+                        </div>
+                    </div>
+                    <h3 class="projetContentTitre">La Frayère<br><br>DEVELOPPEMENT WEB</h3>  
+                </div>
+                <div class="projetContent1 modal2" onclick="openModal('modal2')">
+                    <div class="laptop-wrapper">
+                        <img src="{{ asset('images/10706499.png') }}" alt="image-resas" class="laptop-frame">
+                        <div class="screen-content">
+                            <img src="{{ asset('images/zoo1.png') }}" alt="image-zoo">
+                        </div>
+                    </div>
+                    <h3 class="projetContentTitre">Zoo Arcadia <br><br>DEVELOPPEMENT WEB</h3>
+                </div>
+                <div class="projetContent1 modal3" onclick="openModal('modal3')">
+                    <div class="laptop-wrapper">
+                        <img src="{{ asset('images/10706499.png') }}" alt="image-resas" class="laptop-frame">
+                        <div class="screen-content">
+                            <img src="{{ asset('images/spinlog1.png') }}" alt="spinlog">
+                        </div>
+                    </div>
+                    <h3 class="projetContentTitre">Spinlog<br><br>INTEGRATION WEB</h3>  
+                </div>
+                <div class="projetContent1 modal4" onclick="openModal('modal4')">
+                    <div class="laptop-wrapper">
+                        <img src="{{ asset('images/10706499.png') }}" alt="image-resas" class="laptop-frame">
+                        <div class="screen-content">
+                            <img src="{{ asset('images/musicHeart.png') }}" alt="musicHeart">
+                        </div>
+                    </div>
+                    <h3 class="projetContentTitre">SaaS Associatif pour unité de soins<br><br>DEVELOPPEMENT WEB</h3>
+                </div>   
+            </div>
+            <div class="modal-container" id="modal1">
+                <div class="modal">
+                    <div class="modal-content">
+                        <div class="modalT">
+                            <button class="close modal1" onclick="closeModal('modal1')">&times;</button>
+                            <h1>PORTE FOLIO</h1>
+                            <h3>Développement WEB</h3>
+                        </div>
+                    </div>    
+                    <div class="modalTitre">
+                        <img src="{{ asset('images/resas.png') }}" alt="image-ecran" loading="lazy">
+                        <img src="{{ asset('images/footer.png') }}" alt="image-page" loading="lazy">
+                    </div>
+                    <div class="modalDescriptif"> 
+                        <div class="modalGauche">
+                            <hr class="hr1">
+                            <h2>Développement complet</h2>
+                            <p>Développement d'un site de pêche de loisir <br>
+                                avec réservation et disponibilité des postes <br>
+                                <br>
+                                Administration Symfony
+                            </p>
+                            <hr class="hr1">
+                            <h3>Description</h3>
+                            <ul class="customLi">
+                                <li><i class="fas fa-check iProc2"></i>  Integration HTML / CSS</li>
+                                <li><i class="fas fa-check iProc2"></i>  Symfony front / back</li>
+                                <li><i class="fas fa-check iProc2"></i>  Animation Javascript</li>
+                                <li><i class="fas fa-check iProc2"></i>  Site responsive (compatible tout supports)</li>
+                            </ul>
+                        </div>
+                        <div class="modalDroit">
+                                <hr class="hr1">
+                                <h3>Technologies</h3>
+                                <p class="customP">Symfony</p>
+                                <p class="customP">Mysql</p>
+                                <p class="customP">JavaScript</p>
+                                <hr class="hr1">
+                                <p><i class="fa-regular fa-calendar-days fa-xs iModal"></i> Année 2024</p>
+                                <p><i class="fa-brands fa-stack-overflow iModal"></i> Développement Web</p>
+                                <hr class="hr1">
+                                <a href="https://la-frayere.fr">
+                                <button class="btnSite">Lien vers le site</button>
+                                </a>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="modal-container" id="modal2">
+                <div class="modal">
+                    <div class="modal-content">
+                        <div class="modalT">
+                            <button class="close modal2" onclick="closeModal('modal2')">&times;</button>
+                            <h1>Zoo Arcadia</h1>
+                            <h3>Développement WEB</h3>
+                        </div>
+                    </div>
+                    <div class="modalTitre">
+                        <img src="{{ asset('images/zoo1.png') }}" alt="image-ecran" loading="lazy">
+                        <img src="{{ asset('images/zoo2.png') }}" alt="image-page" loading="lazy">
+                    </div>
+                    <div class="modalDescriptif"> 
+                        <div class="modalGauche">
+                            <hr class="hr1">
+                            <h2>Développement complet</h2>
+                            <p>Développement sur-mesure pour le zoo Arcadia, <br>
+                                afin de permettre au visiteur un apperçu de la visite, <br>
+                                et de suivre leurs animaux favoris <br>
+                                <br>
+                                Administration complète dynamique <br>pour une expérience utilisateur optimale.
+                            </p>
+                            <hr class="hr1">
+                            <h3>Description</h3>
+                            <ul class="customLi">
+                                <li><i class="fas fa-check iProc2"></i>  Integration Symfony</li>
+                                <li><i class="fas fa-check iProc2"></i>  Dynamique / animations JavaScript</li>
+                                <li><i class="fas fa-check iProc2"></i>  Site fictif exercice</li>
+                                <li><i class="fas fa-check iProc2"></i>  Mise à jour regulière en fonction des besoins</li>
+                            </ul>
+                        </div>
+                        <div class="modalDroit">
+                                <hr class="hr1">
+                                <h3>Technologies</h3>
+                                <p class="customP">Symfony</p>
+                                <p class="customP">Mysql</p>
+                                <p class="customP">JavaScript</p>
+                                <hr class="hr1">
+                                <p><i class="fa-regular fa-calendar-days fa-xs iModal"></i> Année 2023</p>
+                                <p><i class="fa-brands fa-stack-overflow iModal"></i> Développement Web</p>
+                                <hr class="hr1">
+                                <a href="https://exerciceback.online">
+                                    <button class="btnSite">Lien vers le site</button>
+                                </a>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+                 
+            <div class="modal-container" id="modal3">
+                <div class="modal">
+                    <div class="modal-content">
+                        <div class="modalT">
+                            <button class="close modal3" onclick="closeModal('modal3')">&times;</button>
+                            <h1>Spinlog</h1>
+                            <h3>Intégration WEB</h3>
+                        </div>
+                    </div>    
+                    <div class="modalTitre">
+                        <img src="{{ asset('images/spinlog1.png') }}" alt="image-ecran" loading="lazy">
+                        <img src="{{ asset('images/spinlog2.png') }}" alt="image-page" loading="lazy">
+                    </div>
+                    <div class="modalDescriptif"> 
+                        <div class="modalGauche">
+                            <hr class="hr1">
+                            <h2>Intégration Web</h2>
+                            <p>Intégration web<br>
+                                Respecter le figma<br>
+                                Mise en place des interactions
+                            </p>
+                            <hr class="hr1">
+                            <h3>Description</h3>
+                            <ul class="customLi">
+                                <li><i class="fas fa-check iProc2"></i>  Integration Symfony</li>
+                                <li><i class="fas fa-check iProc2"></i>  Dynamique / animations JavaScript</li>
+                                <li><i class="fas fa-check iProc2"></i>  Discogs</li>
+                                <li><i class="fas fa-check iProc2"></i>  Multi-langues</li>
+                            </ul>
+                        </div>
+                        <div class="modalDroit">
+                            <hr class="hr1">
+                            <h3>Technologies</h3>
+                            <p class="customP">Symfony</p>
+                            <p class="customP">Mysql</p>
+                            <p class="customP">JavaScript</p>
+                            <hr class="hr1">
+                            <p><i class="fa-regular fa-calendar-days fa-xs iModal"></i> Année 2024</p>
+                            <p><i class="fa-brands fa-stack-overflow iModal"></i> Développement Web</p>
+                            <hr class="hr1">
+                            <a href="https://dev.prod.spinlog.eu/">
+                                <button class="btnSite">Lien vers le site</button>
+                            </a>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div class="modal-container" id="modal4">
+                <div class="modal">
+                    <div class="modal-content">
+                        <div class="modalT">
+                            <button class="close modal4" onclick="closeModal('modal4')">&times;</button>
+                            <h1>SaaS associatif unité de soins</h1>
+                            <h3>Développement WEB</h3>
+                        </div>
+                    </div>    
+                    <div class="modalTitre">
+                        <img src="{{ asset('images/musicHeart.png') }}" alt="image-ecran" loading="lazy">
+                        <img src="{{ asset('images/musicHeart2.png') }}" alt="image-page" loading="lazy">
+                    </div>
+                    <div class="modalDescriptif"> 
+                        <div class="modalGauche">
+                            <hr class="hr1">
+                            <h2>Développement complet</h2>
+                            <p>SaaS Associatif<br>
+                                Accompagnement de malades<br>
+                                Thérapie musicale
+                            </p>
+                            <hr class="hr1">
+                            <h3>Description</h3>
+                            <ul class="customLi">
+                                <li><i class="fas fa-check iProc2"></i>  Integration Symfony</li>
+                                <li><i class="fas fa-check iProc2"></i>  Dynamique / animations JavaScript</li>
+                                <li><i class="fas fa-check iProc2"></i>  Api Spotify</li>
+                                <li><i class="fas fa-check iProc2"></i>  Mise en relation de comptes</li>
+                            </ul>
+                        </div>
+                        <div class="modalDroit">
+                            <hr class="hr1">
+                            <h3>Technologies</h3>
+                            <p class="customP">Symfony</p>
+                            <p class="customP">Mysql</p>
+                            <p class="customP">JavaScript</p>
+                            <hr class="hr1">
+                            <p><i class="fa-regular fa-calendar-days fa-xs iModal"></i> Année 2024</p>
+                            <p><i class="fa-brands fa-stack-overflow iModal"></i> Développement Web</p>
+                            <hr class="hr1">
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    <div>
+        <a class="retour" href="{{ path('app_home') }}">Retour</a>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let closeModalButtons = document.querySelectorAll('.close');
+            closeModalButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    let modalId = button.getAttribute('data-modal');
+                    closeModal(modalId);
+                });
+            });
+
+            let openModalButtons1 = document.querySelectorAll('.projetContent1.modal1');
+            openModalButtons1.forEach(button => {
+                button.addEventListener('click', function () {
+                    openModal('modal1');
+                });
+            });
+
+            let openModalButtons2 = document.querySelectorAll('.projetContent1.modal2');
+            openModalButtons2.forEach(button => {
+                button.addEventListener('click', function () {
+                    openModal('modal2');
+                });
+            });
+
+            let openModalButtons3 = document.querySelectorAll('.projetContent1.modal3');
+            openModalButtons3.forEach(button => {
+                button.addEventListener('click', function () {
+                    openModal('modal3');
+                });
+            });
+
+            let openModalButtons4 = document.querySelectorAll('.projetContent1.modal4');
+            openModalButtons4.forEach(button => {
+                button.addEventListener('click', function () {
+                    openModal('modal4');
+                });
+            });
+
+            let closeModalButtons1 = document.querySelectorAll('.close.modal1');
+            closeModalButtons1.forEach(button => {
+                button.addEventListener('click', function () {
+                    closeModal('modal1');
+                });
+            });
+
+            let closeModalButtons2 = document.querySelectorAll('.close.modal2');
+            closeModalButtons2.forEach(button => {
+                button.addEventListener('click', function () {
+                    closeModal('modal2');
+                });
+            });
+
+            let closeModalButtons3 = document.querySelectorAll('.close.modal3');
+            closeModalButtons3.forEach(button => {
+                button.addEventListener('click', function () {
+                    closeModal('modal3');
+                });
+            });
+
+            let closeModalButtons4 = document.querySelectorAll('.close.modal4');
+            closeModalButtons4.forEach(button => {
+                button.addEventListener('click', function () {
+                    closeModal('modal4');
+                });
+            });
+        });
+
+        function openModal(modalId) {
+            let modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.right = '0';
+                modal.classList.add('active');
+            }
+        }
+
+        function closeModal(modalId) {
+            let modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.right = '-100%';
+                modal.classList.remove('active');
+            }
+        }
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+</main>
+{% endblock %}

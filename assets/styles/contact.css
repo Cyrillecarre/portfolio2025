@@ -1,0 +1,194 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.contactTitre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    margin: 4rem;
+}
+
+.contactGrid {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    gap: 1rem;
+    margin: 1rem auto;
+    width: 80%;
+}
+
+.hrContact {
+    border-top: 1px solid;
+    color: #696363;
+    margin: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.containerC {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.421);
+    border: 0.7rem solid rgba(0, 0, 0, 0.417);
+    height: 400px;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .btnC {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #cd4b52;
+    color: #111;
+    font-size: 1rem;
+    border-radius: 10px;
+    padding: 5px;
+    border: none;
+    width: 60%;
+    height: 2rem;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+ 
+  .inputC2 {
+    height: 1.5rem;
+    display: flex;
+    width: 100%;
+  }
+
+  .inputC {
+    height: 1.5rem;
+    width: 3.5rem;
+    display: flex;
+  }
+  .inputC1 {
+    height: 1.5rem;
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    font-size: 0.8rem;
+    color: black;
+  }
+  .inputC3 {
+    height: 4rem;
+    display: flex;
+    width: 70%;
+    margin:0 auto;
+  }
+
+  .formInput {
+    display: flex;
+    margin-top: 2rem;
+    flex-direction: column;
+    gap: 5rem;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+.inputText {
+    display: flex;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #eee;
+}
+
+  .contactAdresse{
+    display: grid;
+    grid-template-rows: 30% 20% 20%;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contactAdresse i {
+    font-size: 1.5rem;
+    color: #cd4b52;
+  }
+
+  .contactAdresse h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .mapContact {
+    height: 450px;
+  }
+
+.footer {
+    background: #353b48;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+    
+}
+
+.footerContent {
+    display: grid;
+    grid-template-columns: 30% 30%;
+    grid-row: auto auto;
+    gap: 1.5rem;
+    margin: auto;
+    width: 80%;
+    justify-content: space-evenly;
+}
+
+  .popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    width: 50%;
+    height: 50%;
+    color: #000;
+    overflow: auto;
+}
+
+.popup-content {
+    text-align: center;
+}
+
+#closePopupBtn {
+    margin-top: 10px;
+}
+
+.btnMention {
+    width: 40%;
+    height: 50%;
+}
+
+.retour {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    padding-bottom: 4.5rem;
+    color: red;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    
+}
+
+@media (max-width: 1024px) {  
+    
+}

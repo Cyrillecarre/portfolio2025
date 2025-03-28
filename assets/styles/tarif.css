@@ -1,0 +1,204 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.tarif {
+    background-color: rgba(150, 150, 149, 0.38);
+}
+
+.tarifT {
+    display: flex;
+    font-size: 5rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.tarifT2 {
+    display: flex;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hrTarif {
+    display: flex;
+    height: 15px;
+    width: 200px;
+    background-color: #d80d0d;
+    border: none;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.devisContent {
+    display: flex;
+    font-size: 0.7rem;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 82%;
+    height: 3rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.devis {    
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.tarifContent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.2rem;
+    padding: 4rem auto;
+    margin: 0 auto;
+    width: 85%;
+}
+
+.hrTarif1{
+    height: 7px;
+    width: 80px;
+    background-color: #d80d0d;
+    border: none;
+}
+
+.itarif {
+    color: #d80d0d;
+}
+
+.tarifContent1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.124);
+    margin: 20px;
+    width: 80% auto;  
+}
+
+.tarifContent2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.805);
+    margin: 20px;
+    color: #eee;
+    width: 80% auto;  
+}
+
+.tarifContent11 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.354);
+    margin: 10px;
+    padding: 20px;
+    width: 60% auto;  
+}
+
+.tarifContentTitre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    margin: 0;
+    margin-top: 3rem;
+    padding-bottom: 40px;
+    flex-direction: column;
+    text-align: center;
+}
+
+.fleche {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 1.5rem;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.tarifContentText {
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;  
+}
+
+.tarifContentText1 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    margin-right: auto;  
+    background-color: rgba(0, 0, 0, 0.421); 
+}
+.tarifTitreP {
+    font-size: 1.6rem;
+    margin: 0;
+}
+.tarifP {
+    font-size: 5rem;
+    padding: 0;
+    margin: 0;
+}
+
+.euro {
+    font-size: 2rem;
+    margin-left: 5px;
+}
+
+.etoile {
+    display: inline-block;
+    font-size: 1.1rem;
+    color: #eee;
+    margin-top: 10px;
+    vertical-align: top;
+}
+
+.etoile2 {
+    display: inline-block;
+    font-size: 1.1rem;
+    color: black;
+    margin-top: 10px;
+    vertical-align: top;
+}
+
+
+.etoile1 {
+    display: inline-block;
+    font-size: 1.1rem;
+    vertical-align: top;
+    margin-left: 5px;
+}
+
+.condition {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    width: 50% auto;
+}
+.retour {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    padding-bottom: 4.5rem;
+    color: red;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    
+}
+
+@media (max-width: 1024px) {  
+    
+}

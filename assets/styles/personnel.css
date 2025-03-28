@@ -1,0 +1,145 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.a-propos {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.124);
+    padding-bottom: 100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.a-propos1 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.quoteLeft {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    font-size: 8rem;
+    color: #cd4b52;
+    margin: 0;
+}
+
+.quoteRight {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    font-size: 8rem;
+    color: #cd4b52;
+    margin-left: 1rem;
+}
+
+.titrePropos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    margin: 0;
+    padding-bottom: 40px;
+}
+
+.textPropos2 p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+    opacity: 0;
+}
+
+.a-propos3 {
+    display: flex;
+    flex-direction: column;
+    background: #353b48;
+    padding-bottom: 100px;
+    width: 100%;
+    margin: 0 auto;
+    color: white;
+}
+
+.a-propos4 {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 5rem;
+}
+
+.titrePropos2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    margin: 0;
+    padding-bottom: 3rem;
+    padding-top: 8rem;
+    color: white;
+    font-style: italic;
+}
+
+.textPropos {
+    display: grid;
+    grid-template-columns: 20% 70%;
+    gap: 5px;
+    justify-content: start;
+    align-items: center;
+    font-size: 1.5rem;
+    margin: 0;
+    text-align: center;
+}
+
+.textP {
+    font-size: 1.5rem;
+    margin: 0;
+    text-align: center;
+    font-style: italic;
+    margin: 2rem;
+}
+
+.iconeP {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    margin: 0;
+    font-style: none;
+}
+
+.retour {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    padding-bottom: 4.5rem;
+    color: red;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.textPropos {
+    opacity: 0;
+    transform: translateY(90px); 
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.textPropos.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    
+}
+
+@media (max-width: 1024px) {  
+    
+}

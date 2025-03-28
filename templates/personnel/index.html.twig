@@ -1,0 +1,125 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}A-propos{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('styles/personnel.css') }}">
+{% endblock %}
+{% block javascripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const paragraphs = document.querySelectorAll('.textPropos2 p');
+    let currentParagraph = 0; // Index du paragraphe en cours d'affichage
+
+    function typeText(paragraph, speed) {
+        const text = paragraph.innerHTML; // Le texte à afficher
+        paragraph.innerHTML = ''; // On vide le contenu
+        paragraph.style.opacity = '1'; // On rend visible le paragraphe
+        let charIndex = 0;
+
+        const typing = setInterval(function() {
+            if (charIndex < text.length) {
+                paragraph.innerHTML += text[charIndex]; // Ajoute une lettre
+                charIndex++;
+            } else {
+                clearInterval(typing); // Stoppe l'intervalle quand tout le texte est affiché
+                currentParagraph++;
+                if (currentParagraph < paragraphs.length) {
+                    setTimeout(() => typeText(paragraphs[currentParagraph], speed), 200);
+                }
+            }
+        }, speed);
+    }
+    typeText(paragraphs[currentParagraph], 40);
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const textProposElements = document.querySelectorAll('.textPropos');
+
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.bottom >= 0
+        );
+    }
+
+    function checkVisibility() {
+        textProposElements.forEach(function(el) {
+            if (isInViewport(el)) {
+                el.classList.add('visible'); // Ajouter la classe visible quand dans la vue
+            } else {
+                el.classList.remove('visible'); // Supprimer la classe visible quand hors vue
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility(); // Vérification initiale pour les éléments visibles dès le départ
+});
+
+</script>
+{% endblock %}
+
+
+{% block body %}
+<main class="a-propos" id="propos">
+        <div class="a-propos1"> 
+            <span class="quoteLeft"><i class="fa-solid fa-quote-left"></i></span>
+            <h3 class="titrePropos">Qui suis-je?</h3>
+            <div class="textPropos2">
+                <p>Bonjour ! Je suis Cyrille CARRE, un passionné de l'univers du développement web, où la créativité rencontre la fonctionnalité. Basé à POITIERS, je me consacre à créer des expériences numériques exceptionnelles. 
+                </p>
+                <p>J'ai façonné mon parcours à travers une variété de projets stimulants, de la conception de sites web élégants à la mise en  œuvre de fonctionnalités complexes. 
+                </p>
+                <p>Ma mission ?
+                </p>
+                <p>Transformer des idées innovantes en réalités interactives.
+                </p>
+            </div>
+            <span class="quoteRight"><i class="fa-solid fa-quote-right"></i></span>
+        </div>
+    </main>
+    <main class="a-propos3">
+        <div class="a-propos4">
+
+        <h4 class="titrePropos">Mes points forts :</h4>
+        <div class="textPropos">
+            <p class="iconeP">🚀</p>
+            <p class="textP">Expertise Technique : Maîtrise des differents languages necessaire à la mise en oeuvre d'un site web, 
+                avec une connaissance approfondie des derniers frameworks et technologies.</p>
+        </div>
+        <div class="textPropos">
+            <p class="iconeP">🎨</p>
+            <p class="textP">Design Intuitif : Associant la puissance du code à une esthétique soignée, 
+                je crée des interfaces utilisateur intuitives et captivantes.</p>
+        </div>
+        <div class="textPropos">
+            <p class="iconeP">💡</p>
+            <p class="textP">Solutions Personnalisées : Chaque projet est unique. Je m'engage à fournir des solutions sur mesure, 
+                alignées sur les objectifs spécifiques de mes clients.</p>
+        </div>
+        <div class="textPropos">
+            <p class="iconeP">🤝</p>
+            <p class="textP">Collaboration Transparente : La communication ouverte et la collaboration étroite 
+                sont au cœur de ma méthode de travail, garantissant des résultats qui dépassent les attentes.</p>
+        </div>
+        <div class="textPropos">
+            <p class="iconeP">👉</p>
+            <p class="textP">Rejoignez l'Aventure :
+            Si vous cherchez un partenaire de confiance pour concrétiser vos idées en ligne, 
+            je suis prêt à relever le défi. Collaborons pour créer quelque chose d'extraordinaire !</p>
+        </div>  
+        <div class="textPropos">
+            <p class="iconeP">📬</p>
+            <p class="textP">Contactez-moi pour discuter de votre projet et découvrir comment nous pouvons créer 
+                ensemble une expérience web mémorable.</p>
+        </div>   
+        <h4 class="titrePropos2">À bientôt sur le web !</h4>
+    </div>
+    <div>
+        <a class="retour" href="{{ path('app_home') }}">Retour</a>
+    </div>
+    </main> 
+{% endblock %}

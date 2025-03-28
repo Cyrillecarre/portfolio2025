@@ -1,0 +1,91 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes Compétences{% endblock %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" href="{{ asset('styles/competence.css') }}">
+{% endblock %}
+
+{% block javascripts %}
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const progressBars = document.querySelectorAll('progress');
+
+    progressBars.forEach(function(progress, index) {
+        const value = progress.getAttribute('value');
+
+        setTimeout(function() {
+            progress.style.opacity = '1';
+            progress.style.width = `100%`;
+        }, index * 200); 
+    });
+});
+  </script>
+{% endblock %}
+
+{% block body %}
+<main class="competences" id="competences">
+        <h1 class="competencesTitre">Mes Compétences</h1>
+        <div class="competencesContainer">
+            <img src="{{ asset('images/skills.jpg') }}" class="skillImage" alt="image-skills">
+            <div class="competencesContent">
+                <div class="competencesContent1">
+                    <h3 class="competencesContentTitre">HTML5</h3>
+                    <p class="competencesContentText">Sémantique, balises, formulaires, canvas</p>
+                    <progress value="95" max="100" class="animated-progress">95%</progress>
+                </div>
+                <div class="competencesContent1">
+                    <h3 class="competencesContentTitre">CSS</h3>
+                    <p class="competencesContentText">Sélecteurs, positionnement, flexbox, grid, animations</p>
+                    <progress value="92" max="100" class="animated-progress">92%</progress>
+                </div>
+                <div class="competencesContent1">
+                    <h3 class="competencesContentTitre">Symfony</h3>
+                    <p class="competencesContentText">POO, front-end, back-end</p>
+                    <progress value="90" max="100" class="animated-progress">90%</progress>
+                </div>
+                <div class="competencesContent1">
+                    <h3 class="competencesContentTitre">BootStrap</h3>
+                    <p class="competencesContentText">Responsive design, composants</p>
+                    <progress value="75" max="100" class="animated-progress">75%</progress>
+                </div>
+                <div class="competencesContent1">
+                    <h3 class="competencesContentTitre">Tailwind</h3>
+                    <p class="competencesContentText">Responsive design, composants</p>
+                    <progress value="75" max="100" class="animated-progress">75%</progress>
+                </div>
+                <div class="competencesContent1">
+                    <h3 class="competencesContentTitre">JavaScript</h3>
+                    <p class="competencesContentText">Fetch, Animations</p>
+                    <progress value="80" max="100" class="animated-progress">80%</progress>
+                </div>
+                <div class="competencesContent1">
+                    <h3 class="competencesContentTitre">VueJs</h3>
+                    <p class="competencesContentText">Animations, Front-end</p>
+                    <progress value="60" max="100" class="animated-progress">60%</progress>
+                <div class="competencesContent1">
+                    <h3 class="competencesContentTitre">PHP</h3>
+                    <p class="competencesContentText">Symfony, POO, MVC</p>
+                    <progress value="90" max="100" class="animated-progress">90%</progress>
+                </div>
+                
+                <div class="competencesContent1">
+                    <h3 class="competencesContentTitre">SQL</h3>
+                    <p class="competencesContentText">Syntaxe, jointures, fonctions</p>
+                    <progress value="80" max="100" class="animated-progress">80%</progress>
+                </div>
+                <div class="competencesContent1">
+                    <h3 class="competencesContentTitre">Python</h3>
+                    <p class="competencesContentText">Algorithme</p>
+                    <progress value="60" max="100" class="animated-progress">60%</progress>
+                </div>
+            </div>
+        </div>
+        <div class="devisContent">
+            <h1 class="devis">un projet? une idée? hesitez pas à demander un devis gratuit...</h1>
+        </div>
+        <div>
+            <a class="retour" href="{{ path('app_home') }}">Retour</a>
+        </div>
+    </main>
+{% endblock %}
