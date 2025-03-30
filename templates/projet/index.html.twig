@@ -8,6 +8,9 @@
 
 {% block body %}
 <main class="projet" id="projets">
+    <div class="loader-container" id="loader">
+        <span class="loader"></span>
+    </div>
         <div class="containerI">
             <div class="contentP">
                 <h1 class="projetTitre">Mes Projets</h1>
@@ -56,7 +59,7 @@
                     <div class="modal-content">
                         <div class="modalT">
                             <button class="close modal1" onclick="closeModal('modal1')">&times;</button>
-                            <h1>PORTE FOLIO</h1>
+                            <h1>La Frayere</h1>
                             <h3>Développement WEB</h3>
                         </div>
                     </div>    
@@ -245,87 +248,88 @@
         <a class="retour" href="{{ path('app_home') }}">Retour</a>
     </div>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            let closeModalButtons = document.querySelectorAll('.close');
-            closeModalButtons.forEach(button => {
-                button.addEventListener('click', function () {
-                    let modalId = button.getAttribute('data-modal');
-                    closeModal(modalId);
-                });
-            });
+       // Fonctions globales pour les modales
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.right = '0';
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+}
 
-            let openModalButtons1 = document.querySelectorAll('.projetContent1.modal1');
-            openModalButtons1.forEach(button => {
-                button.addEventListener('click', function () {
-                    openModal('modal1');
-                });
-            });
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.right = '-100%';
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+}
 
-            let openModalButtons2 = document.querySelectorAll('.projetContent1.modal2');
-            openModalButtons2.forEach(button => {
-                button.addEventListener('click', function () {
-                    openModal('modal2');
-                });
-            });
+document.addEventListener('DOMContentLoaded', function() {
+    const loader = document.getElementById('loader');
+    let backupTimeout;
+    
+    const mainImages = Array.from(document.querySelectorAll('.projetContent img, .laptop-wrapper img'));
+    
+    let imagesToLoad = mainImages.length;
+    
+    function hideLoader() {
+        if (backupTimeout) {
+            clearTimeout(backupTimeout);
+        }
+        loader.style.opacity = '0';
+        loader.style.visibility = 'hidden';
+        document.querySelector('.containerI').style.opacity = '1';
+        initModals();
+    }
 
-            let openModalButtons3 = document.querySelectorAll('.projetContent1.modal3');
-            openModalButtons3.forEach(button => {
-                button.addEventListener('click', function () {
-                    openModal('modal3');
-                });
-            });
-
-            let openModalButtons4 = document.querySelectorAll('.projetContent1.modal4');
-            openModalButtons4.forEach(button => {
-                button.addEventListener('click', function () {
-                    openModal('modal4');
-                });
-            });
-
-            let closeModalButtons1 = document.querySelectorAll('.close.modal1');
-            closeModalButtons1.forEach(button => {
-                button.addEventListener('click', function () {
-                    closeModal('modal1');
-                });
-            });
-
-            let closeModalButtons2 = document.querySelectorAll('.close.modal2');
-            closeModalButtons2.forEach(button => {
-                button.addEventListener('click', function () {
-                    closeModal('modal2');
-                });
-            });
-
-            let closeModalButtons3 = document.querySelectorAll('.close.modal3');
-            closeModalButtons3.forEach(button => {
-                button.addEventListener('click', function () {
-                    closeModal('modal3');
-                });
-            });
-
-            let closeModalButtons4 = document.querySelectorAll('.close.modal4');
-            closeModalButtons4.forEach(button => {
-                button.addEventListener('click', function () {
-                    closeModal('modal4');
-                });
-            });
+    if(imagesToLoad === 0) {
+        hideLoader();
+        return;
+    }
+    
+    function imageLoaded() {
+        imagesToLoad--;
+        if(imagesToLoad <= 0) {
+            hideLoader();
+        }
+    }
+    
+    mainImages.forEach(img => {
+        if(img.complete && img.naturalWidth > 0) {
+            imageLoaded();
+        } else {
+            img.addEventListener('load', imageLoaded);
+            img.addEventListener('error', imageLoaded);
+        }
+    });
+    
+    // Timeout de secours (5 secondes max)
+    backupTimeout = setTimeout(hideLoader, 5000);
+    
+    function initModals() {
+        // Gestion simplifiée des modales
+        document.addEventListener('click', function(e) {
+            // Ouverture modale
+            if (e.target.closest('.projetContent1')) {
+                const modalClass = e.target.closest('.projetContent1').classList[1];
+                if (modalClass) {
+                    openModal(modalClass);
+                }
+            }
+            
+            // Fermeture modale
+            if (e.target.closest('.close')) {
+                const modalClass = e.target.closest('.close').classList[1];
+                if (modalClass) {
+                    closeModal(modalClass);
+                }
+            }
         });
-
-        function openModal(modalId) {
-            let modal = document.getElementById(modalId);
-            if (modal) {
-                modal.style.right = '0';
-                modal.classList.add('active');
-            }
-        }
-
-        function closeModal(modalId) {
-            let modal = document.getElementById(modalId);
-            if (modal) {
-                modal.style.right = '-100%';
-                modal.classList.remove('active');
-            }
-        }
+    }
+});
     </script>
     <script
       type="module"
