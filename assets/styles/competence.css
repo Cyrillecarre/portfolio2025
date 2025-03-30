@@ -59,74 +59,52 @@
     height: 100%;
 }
 
+/* Gardez vos styles existants */
 .animated-progress {
     border-radius: 50px;
     opacity: 0;
     width: 0%;
     transition: width 1s ease-in-out, opacity 0.5s ease-in-out;
-}
-
-.animated-progress:nth-child(1) {
-    transition-delay: 0s, 0s;
-}
-
-.animated-progress:nth-child(2) {
-    transition-delay: 0.2s, 0.2s;
-}
-
-.animated-progress:nth-child(3) {
-    transition-delay: 0.5s, 0.5s;
-}
-
-.animated-progress:nth-child(4) {
-    transition-delay: 0.8s, 0.8s;
-}
-
-.animated-progress:nth-child(5) {
-    transition-delay: 1.1s, 1.1s;
-}
-
-.animated-progress:nth-child(6) {
-    transition-delay: 1.4s, 1.4s;
-}
-
-.animated-progress:nth-child(7) {
-    transition-delay: 1.7s, 1.7s;
-}
-
-.animated-progress:nth-child(8) {
-    transition-delay: 2s, 2s;
-}
-
-.animated-progress:nth-child(9) {
-    transition-delay: 2.5s, 2.5s;
-}
-
-progress {
-    width: 100%;
+    -webkit-appearance: none; /* Ajout pour Safari */
+    appearance: none;
     height: 17px;
-    margin-top: 6px;
     position: relative;
-    background-color: white;
+    background-color: #f0f0f0; /* Fond gris */
 }
 
-progress::-webkit-progress-bar {
-    background-color: white;
-    border-radius: 20px;
+/* Styles spécifiques pour Safari/Chrome */
+.animated-progress::-webkit-progress-bar {
+    background-color: transparent; /* Fond transparent */
+    border-radius: 50px;
 }
 
-progress::-webkit-progress-value {
+.animated-progress::-webkit-progress-value {
+    background-color: #0f03f2; /* Bleu comme dans votre code */
+    border-radius: 50px;
+    transition: width 1s ease-in-out; /* Animation synchronisée */
+}
+
+/* Style pour Firefox */
+.animated-progress::-moz-progress-bar {
     background-color: #0f03f2;
+    border-radius: 50px;
 }
 
-progress::after {
-    content: attr(value) '%';
+/* Affichage du pourcentage - Solution compatible Safari */
+.progress-wrapper {
+    position: relative;
+    width: 100%;
+    margin-top: 6px;
+}
+
+.progress-percent {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 14px;
+    font-size: 12px;
+    z-index: 2;
 }
 
 .retour {

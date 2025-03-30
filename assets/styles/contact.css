@@ -241,6 +241,10 @@
         margin: 0 auto;
         border-radius: 5px;
     }
+    .popup {
+        width: 80%;
+        height: 70%;
+    }
 
 }
 
